@@ -1,0 +1,116 @@
+<%-- 
+    Document   : vin
+    Created on : 28 avr. 2014, 09:41:37
+    Author     : Morvan
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VinoVivo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+        <link rel="stylesheet" href="style.css">
+
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery.mobile.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="pageEvalComplete">
+            <div data-role="header">
+                <h1>Vino Vivo</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="stand.jsp" data-transition="none" >Stands</a></li>
+                        <li><a href="vins.jsp" class="ui-btn-active ui-state-persist" >Vins</a></li>
+                        <li><a href="vinsDegust.jsp" data-transition="none" rel="external">Commandes</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <a href="index.jsp" data-transition="none" class="ui-btn ui-btn-inline">Accueil</a><br>
+                <p style="font-size: 16px">Description détaillée du vin</p>
+                <form>
+                    <h4 style="margin-bottom: -5px;">Evaluation visuelle</h4>
+                    <div class="ui-field-contain" >
+                        <label for="select-native-4" style="font-size: 12px;">Couleur</label>
+                        <select name="select-native-4" id="select-native-4">
+                            <option>Couleur / Teinte</option>
+                            <optgroup label="Vins Blancs">
+                                <option value="1">Jaune très clair</option>
+                                <option value="2">A reflets verts</option>
+                                <option value="3">Jaune or</option>
+                                <option value="4">Bronze</option>
+                            </optgroup>
+                            <optgroup label="Vins Rosés">
+                                <option value="5">Reflets rosés</option>
+                                <option value="6">Rose</option>
+                                <option value="7">rose jaune</option>
+                            </optgroup>
+                            <optgroup label="Vins Rouges">
+                                <option value="8">Violet</option>
+                                <option value="9">Rouge</option>
+                                <option value="10">Rouge orange</option>
+                                <option value="11">Rouge brun</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend style="font-size: 12px;">Intensité de la couleur : </legend>
+                        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="pale">
+                        <label style="font-size: 11px;" for="radio-choice-h-2a">Pâle</label>
+                        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="soutenue">
+                        <label style="font-size: 11px;" for="radio-choice-h-2b">Soutenue</label>
+                        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="intense">
+                        <label style="font-size: 11px;" for="radio-choice-h-2c">Intense</label>
+                        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2d" value="tresIntense">
+                        <label style="font-size: 11px;" for="radio-choice-h-2d">Très intense</label>
+                    </fieldset>
+                    <h4 style="margin-bottom: -5px;">Evaluation olfactive</h4>
+                    <table>
+                        <tr>
+                            <td style="font-size: 12px;">Odeur : </td>
+                            <td><input type="text" name="odeur" value="" size="20" placeholder="Fruité, boisé, épicé, ..."/></td>
+                        </tr>
+                    </table>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend style="font-size: 12px;">Intensité de l'odeur : </legend>
+                        <input type="radio" name="radio-choice-h-3" id="radio-choice-h-3a" value="pale">
+                        <label style="font-size: 11px;" for="radio-choice-h-3a">Fermé</label>
+                        <input type="radio" name="radio-choice-h-3" id="radio-choice-h-3b" value="soutenue">
+                        <label style="font-size: 11px;" for="radio-choice-h-3b">Peu intense</label>
+                        <input type="radio" name="radio-choice-h-3" id="radio-choice-h-3c" value="intense">
+                        <label style="font-size: 11px;" for="radio-choice-h-3c">Intense</label>
+                        <input type="radio" name="radio-choice-h-3" id="radio-choice-h-3d" value="tresIntense">
+                        <label style="font-size: 11px;" for="radio-choice-h-3d">Très intense</label>
+                    </fieldset>
+                    <h4 style="margin-bottom: -5px;">Evaluation en bouche</h4>
+                    <table>
+                        <tr>
+                            <td style="font-size: 12px;">Arôme : </td>
+                            <td><input type="text" name="odeur" value="" size="20" placeholder="Fruité, boisé, épicé, ..."/></td>
+                        </tr>
+                    </table>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend style="font-size: 12px;">Saveur</legend>
+                        <input type="radio" name="radio-choice-h-4" id="radio-choice-h-4a" value="pale">
+                        <label style="font-size: 11px;" for="radio-choice-h-4a">Sucré</label>
+                        <input type="radio" name="radio-choice-h-4" id="radio-choice-h-4b" value="soutenue">
+                        <label style="font-size: 11px;" for="radio-choice-h-4b">Salé</label>
+                        <input type="radio" name="radio-choice-h-4" id="radio-choice-h-4c" value="intense">
+                        <label style="font-size: 11px;" for="radio-choice-h-4c">Acide</label>
+                        <input type="radio" name="radio-choice-h-4" id="radio-choice-h-4d" value="tresIntense">
+                        <label style="font-size: 11px;" for="radio-choice-h-4d">Amer</label>
+                    </fieldset>
+                    <input type="reset" value="Reset" >
+                </form>
+                <a href="#" data-transition="none" class="ui-btn ui-btn-inline" data-rel="back">Retour</a>
+                <a href="#" data-transition="none" class="ui-btn ui-btn-inline">Sauvegarder l'évaluation</a>
+                <a href="#" data-transition="none" class="ui-btn ui-btn-inline">Ajouter à la liste de commande</a>
+            </div>
+        </div> 
+    </body>
+</html>
