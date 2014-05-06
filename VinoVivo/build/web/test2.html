@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <title>VinoVivo</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/jquery.mobile.min.css" />
         <link rel="stylesheet" href="plugins/jquery/jRating.jquery.css">
         <link type="text/css" rel="stylesheet" href="plugins/raty/demo/css/application.css">
@@ -19,29 +19,26 @@ and open the template in the editor.
         <script src="plugins/raty/lib/jquery.raty.js"></script>
     </head>
     <body>
-        <div data-role="page" id="pageCommande">
+        <div data-role="page" id="pageStand">
             <div data-role="header">
                 <h1>Vino Vivo</h1>
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="groupe.html" data-transition="none" >Stands</a></li>
-                        <li><a href="vins.html" >Vins</a></li>
-                        <li><a href="commande.html" class="ui-btn-active ui-state-persist" data-transition="none" rel="external">Commandes</a></li>
+                        <li><a href="#" class="ui-btn-active ui-state-persist" rel="external">Stands</a></li>
+                        <li><a href="vins.html" data-transition="none" rel="external">Vins</a></li>
+                        <li><a href="commande.html" data-transition="none" rel="external">Commandes</a></li>
                     </ul>
                 </div>
             </div>
-
             <div data-role="main" class="ui-content">
-                <p style="font-size: 15px">Liste des vins souhaités</p>
-                <ol data-role="listview">
-                    <li>Calamin Lavaux AOC La Béguine J. et M. Dizerens</li>
-                    <li>St-Saphorin Lavaux AOC J. et M. Dizerens</li>
-                    <li>Aigle Chablais AOC Merveille des Roches</li>
-                    <li>Genève AOC Sauvignon Gris Le Savant</li>
-                    <li>Necuhâtel AOC Hôpital Pourtalès</li>
-                </ol><br>
-                <a href="#" data-transition="none" class="ui-btn ui-btn-inline" data-rel="back">Retour</a>
+                <div data-role="collapsibleset" data-mini="true">
+                    <div data-role="collapsible">
+                        <h2>Stand 1<br><span style="font-size:10px">Vins blancs Suisse</span></h2>
+                        <p>Vins blancs Suisse</p>
+                        <a href="vins.html"  rel="external" data-transition="none" data-prefetch="true">Accéder aux vins</a>
+                    </div>
+                </div>
             </div>
-        </div> 
+        </div>
     </body>
 </html>

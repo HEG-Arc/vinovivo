@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>VinoVivo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery.mobile.min.js"></script>
+    </head>
+    <body>
+        <div style="margin-left:20px;">
+            <h1>Accueil</h1><hr>
+            <form action="evenement.html" >
+                <h3>Liste des événement</h3>
+                <table data-role="table" class="ui-body-d ui-shadow table-stripe ui-responsive">
+                    <thead>
+                        <tr class="ui-bar-d">
+                            <th>Nom</th>
+                            <th>Lieu</th>
+                            <th>Date</th>
+                            <th>Horaire</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Caves ouvertes</td>
+                            <td>Dans le vignoble Neuchâtelois</td>
+                            <td>02.05.2014 - 03.05.2014</td>
+                            <td>Vendredi dès 17h - Samedi dès 10h</td>
+                            <td><a href="vinEval.html" rel="external">Afficher évaluations</a> / 
+                            <a href="vinsCommande.html" rel="external">Afficher les commandes</a></td>
+                        </tr>
+                        <tr>
+                            <td>Foire au vins sur bateaux</td>
+                            <td>Neuchâtel - Port de la ville</td>
+                            <td>19.03.2014 - 23.03.2014</td>
+                            <td>17h - 22h</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tr>
+                        <td><a href="evenement.html" rel="external" data-transition="none" class="ui-btn ui-btn-inline">Ajouter un événement</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </body>
+</html>
