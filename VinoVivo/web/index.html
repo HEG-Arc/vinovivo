@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="vinApp">
+    <head>
+        <title>Vino Vivo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery.mobile.min.js"></script>
+
+        <script type="text/javascript" src="scripts/angular.js"></script>
+        <script type="text/javascript" src="scripts/angular-route.js"></script>
+
+        <link rel="stylesheet" href="plugins/jquery/jRating.jquery.css">
+        <script src="plugins/raty/lib/jquery.raty.js"></script>
+    </head>
+    <body id="body1" ng-controller="vinsCtrl">
+        <div data-role="page" id="pageWine" >
+            <div data-role="header">
+                <h1>Vino Vivo</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-transition="none" >Evénements</a></li>
+                        <li><a href="#vins" class="ui-btn-active ui-state-persist" >Vins</a></li>
+                        <li><a href="#home" data-transition="none" rel="external">Vins dégustés</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div ng-view></div>
+            </div>
+
+        </div> 
+        <script type="text/javascript" src="scripts/websocket.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/controllers.js"></script>
+        <script type="text/javascript" src="scripts/services.js"></script>
+    </body>
+</html>

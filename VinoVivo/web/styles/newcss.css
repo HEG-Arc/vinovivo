@@ -1,0 +1,16 @@
+ul.library {
+    max-height: 1000px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.closed + ul.library {
+    max-height: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}

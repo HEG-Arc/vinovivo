@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html ng-app>
     <head>
         <title>VinoVivo</title>
         <meta charset="UTF-8">
@@ -17,6 +17,7 @@ and open the template in the editor.
         <script src="scripts/jquery.mobile.min.js"></script>
         <script src="plugins/jquery/jRating.jquery.js"></script>
         <script src="plugins/raty/lib/jquery.raty.js"></script>
+        <script type="text/javascript" src="scripts/angular.js"></script>
     </head>
     <body>
         <div data-role="page" id="pageWine" >
@@ -38,6 +39,7 @@ and open the template in the editor.
                         <td><input type="text" name="tag" value="" size="40" placeholder="Vin à rechercher..."/></td>
                     </tr>
                 </table>
+
                 <div data-role="collapsible-set" data-mini="true" data-collapsed-icon="false" data-expanded-icon="false" >
                     <div data-role="collapsible">
                         <h2>1. Calamin Lavaux AOC La Béguine J. et M. Dizerens<br><span>2012, 70cl, 96.60CHF (6 bout.)</span></h2>
