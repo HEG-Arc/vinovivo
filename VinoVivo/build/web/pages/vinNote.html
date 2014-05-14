@@ -1,0 +1,12 @@
+<h2 id="nom">{{vin.nom}}</h2>
+<h4>Noter le vin</h4>
+<div id="default-demo1" style="width: 500px;"></div>
+<a href="#/vins" data-transition="none" class="ui-btn ui-btn-inline">Annuler</a>
+<a href="#/vins" data-transition="none" class="ui-btn ui-btn-inline">Sauvegarder</a>
+<script type="text/javascript">
+    var scope = angular.element(document.getElementById('nom')).scope();
+    $(function() {
+        $.fn.raty.defaults.path = 'lib/img';
+        $('#default-demo1').raty({ score : 4 });
+    });
+</script>

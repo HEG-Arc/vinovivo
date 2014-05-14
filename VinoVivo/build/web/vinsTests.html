@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="vinApp">
+    <head>
+        <title>Vino Vivo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/jquery.mobile.min.css" />
+
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery.mobile.min.js"></script>
+        <script type="text/javascript" src="scripts/angular.js"></script>
+        <script type="text/javascript" src="scripts/angular-route.js"></script>
+    </head>
+    <body ng-controller="vinsCtrl">
+        <div data-role="page" id="pageWine" >
+            <div data-role="header">
+                <h1>Vino Vivo</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="groupe.html" data-transition="none" >Stands</a></li>
+                        <li><a href="#" class="ui-btn-active ui-state-persist" >Vins</a></li>
+                        <li><a href="commande.html" data-transition="none" rel="external">Commandes</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <a custom-button>Click me</a>
+                <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke">
+                    <caption>Liste des vins</caption>
+                    <thead> <!-- En-tête du tableau -->
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Prix</th>
+                            <th>Note</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot> <!-- Pied de tableau -->
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Prix</th>
+                            <th>Note</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+
+                    <tbody> <!-- Corps du tableau -->
+                        <tr ng-repeat="vin in vins">
+                            <td>{{vin.id}}</td>
+                            <td>{{vin.nom}}</td>
+                            <td>{{vin.prix}}</td>
+                            <td>{{vin.note}}</td>
+                            <td><a href="Evaluer.html"  rel="external">Evaluer</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div> 
+        <script type="text/javascript" src="scripts/websocket.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/controllers.js"></script>
+        <script type="text/javascript" src="scripts/services.js"></script>
+    </body>
+</html>

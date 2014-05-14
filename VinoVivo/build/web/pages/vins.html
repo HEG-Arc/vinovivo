@@ -1,0 +1,32 @@
+<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive table-stroke">
+    <caption>Liste des vins</caption>
+    <thead> <!-- En-tête du tableau -->
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Note</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tfoot> <!-- Pied de tableau -->
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Note</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
+
+    <tbody> <!-- Corps du tableau -->
+        <tr ng-repeat="vin in vins">
+            <td>{{vin.id}}</td>
+            <td>{{vin.nom}}</td>
+            <td>{{vin.prix}}</td>
+            <td>{{vin.note}}</td>
+            <td><a href="#vins/{{$index}}" rel="external">Evaluer</a></td>
+        </tr>
+    </tbody>
+</table>
